@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Catálogo multimédia da StreamZone com músicas e vídeos.">
+  <meta name="keywords" content="catálogo, streaming, música, vídeo, XML">
+  <meta name="author" content="StreamZone">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StreamZone | Catálogo</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header id="topo">
+    <div class="logo-area">
+      <h1>StreamZone</h1>
+      <p>Plataforma Estática de Streaming Multimédia</p>
+    </div>
+  </header>
+
+  <nav class="menu-principal" aria-label="Menu principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html" class="ativo">Catálogo</a></li>
+      <li><a href="planos.html">Planos</a></li>
+      <li><a href="multimedia.html">Multimédia</a></li>
+      <li><a href="contactos.html">Contactos</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+  <h2>Catálogo multimédia</h2>
+  <p>
+    Nesta página são apresentados conteúdos de música e vídeo carregados a partir
+    de um ficheiro XML através de JavaScript.
+  </p>
+
+  <p>
+    O ficheiro XML funciona como uma pequena fonte de dados local. O JavaScript lê
+    esse ficheiro, interpreta os elementos e cria automaticamente as linhas da tabela.
+  </p>
+
+  <p>
+    <a href="xml/catalogo.xml" download>Descarregar ficheiro XML</a>
+  </p>
+
+  <p>
+    <a href="xml/catalogo.xsd" download>Descarregar schema XSD</a>
+  </p>
+</section>
+
+    <section>
+      <h2>Lista de conteúdos</h2>
+
+      <button type="button" id="btn-carregar-catalogo">
+        Carregar catálogo XML
+      </button>
+
+      <button type="button" id="btn-alternar-info">
+        Mostrar/Esconder informação
+      </button>
+
+      <p id="info-catalogo">
+        O catálogo contém conteúdos multimédia organizados por título, tipo,
+        género, duração, ano e classificação.
+      </p>
+
+      <table id="tabela-catalogo">
+        <thead>
+          <tr>
+            <th>Título</th>
+            <th>Tipo</th>
+            <th>Género</th>
+            <th>Duração</th>
+            <th>Ano</th>
+            <th>Classificação</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <td colspan="6">Carrega no botão para apresentar os dados do XML.</td>
+          </tr>
+        </tbody>
+
+        <tfoot>
+          <tr>
+            <td colspan="6">Fonte dos dados: ficheiro XML local.</td>
+          </tr>
+        </tfoot>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      StreamZone<br>
+      Projeto académico de Tecnologias Internet<br>
+      Universidade da Maia
+    </address>
+
+    <p>&copy; 2026 StreamZone. Projeto académico.</p>
+  </footer>
+</body>
+</html>

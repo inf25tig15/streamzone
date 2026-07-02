@@ -1,0 +1,681 @@
+/* =========================================================
+   StreamZone - CSS principal
+   Projeto académico de Tecnologias Internet
+   ========================================================= */
+
+
+/* ---------- Variáveis globais ---------- */
+
+:root {
+  --cor-fundo: #0f172a;
+  --cor-fundo-secundaria: #111827;
+  --cor-caixa: #1e293b;
+  --cor-caixa-clara: #273449;
+  --cor-texto: #f8fafc;
+  --cor-texto-suave: #cbd5e1;
+  --cor-destaque: #38bdf8;
+  --cor-destaque-escura: #0284c7;
+  --cor-aviso: #facc15;
+  --cor-borda: #334155;
+  --largura-maxima: 1100px;
+}
+
+
+/* ---------- Reset básico e box model ---------- */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+
+
+/* ---------- Seletores de tipo ---------- */
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  line-height: 1.2;
+}
+
+p {
+  color: var(--cor-texto-suave);
+}
+
+a {
+  color: var(--cor-destaque);
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
+/* ---------- Cabeçalho ---------- */
+
+#topo {
+  min-height: 220px;
+  padding: 48px 24px;
+  text-align: center;
+  background-color: var(--cor-fundo-secundaria);
+  background-image:
+    linear-gradient(rgba(15, 23, 42, 0.82), rgba(15, 23, 42, 0.95)),
+    url("../imagens/fundo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-bottom: 4px solid var(--cor-destaque);
+}
+
+.logo-area h1 {
+  width: 280px;
+  height: 80px;
+  margin: 0 auto 12px;
+  background-image: url("../imagens/logo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  overflow: hidden;
+  text-indent: 100%;
+  white-space: nowrap;
+}
+
+.logo-area p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: var(--cor-texto-suave);
+}
+
+
+/* ---------- Menu principal ---------- */
+
+.menu-principal {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background-color: #020617;
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+/* seletor combinador filho */
+.menu-principal > ul {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 16px;
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+}
+
+.menu-principal li {
+  margin: 0;
+}
+
+.menu-principal a {
+  display: block;
+  padding: 16px 18px;
+  color: var(--cor-texto);
+  font-weight: bold;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* pseudo-classe */
+.menu-principal a:hover {
+  background-color: var(--cor-caixa);
+  color: var(--cor-destaque);
+}
+
+.menu-principal a.ativo {
+  background-color: var(--cor-destaque);
+  color: #020617;
+}
+
+
+/* ---------- Conteúdo principal ---------- */
+
+main {
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 32px 20px;
+}
+
+/* combinador descendente */
+main section {
+  margin-bottom: 32px;
+  padding: 28px;
+  background-color: var(--cor-caixa);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+}
+
+/* pseudo-elemento */
+main section > h2::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 4px;
+  margin-top: 10px;
+  background-color: var(--cor-destaque);
+  border-radius: 8px;
+}
+
+
+/* ---------- Hero da página inicial ---------- */
+
+.hero {
+  min-height: 320px;
+  padding: 56px 32px;
+  background-image:
+    linear-gradient(rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.92)),
+    url("../imagens/streaming.jpg");
+  background-size: cover;
+  background-position: center;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.3rem;
+  margin-bottom: 16px;
+}
+
+.hero p {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero mark {
+  padding: 2px 6px;
+  background-color: var(--cor-aviso);
+  color: #111827;
+  border-radius: 4px;
+}
+
+
+/* ---------- Botões ---------- */
+
+.botao-destaque,
+button {
+  display: inline-block;
+  margin: 8px 6px 8px 0;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 999px;
+  background-color: var(--cor-destaque);
+  color: #020617;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.25s ease, background-color 0.25s ease;
+}
+
+.botao-destaque:hover,
+button:hover {
+  background-color: var(--cor-destaque-escura);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+
+/* ---------- Cards ---------- */
+
+.conteudos-destaque {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.conteudos-destaque h2 {
+  flex-basis: 100%;
+}
+
+.card {
+  position: relative;
+  flex: 1 1 280px;
+  padding: 20px;
+  background-color: var(--cor-caixa-clara);
+  border: 1px solid var(--cor-borda);
+  border-radius: 14px;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.02);
+  border-color: var(--cor-destaque);
+}
+
+.card::before {
+  content: "Destaque";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  padding: 4px 10px;
+  background-color: var(--cor-destaque);
+  color: #020617;
+  font-size: 0.75rem;
+  font-weight: bold;
+  border-radius: 999px;
+}
+
+.card figure {
+  margin: 0 0 16px;
+}
+
+.card figcaption {
+  margin-top: 8px;
+  font-size: 0.9rem;
+  color: var(--cor-texto-suave);
+}
+
+
+/* ---------- Aside com float e position ---------- */
+
+.nota-lateral {
+  float: right;
+  position: relative;
+  width: 36%;
+  margin: 0 0 24px 24px;
+  padding: 22px;
+  background-color: #082f49;
+  border-left: 5px solid var(--cor-destaque);
+  border-radius: 12px;
+}
+
+main::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+
+/* ---------- Texto destacado ---------- */
+
+strong {
+  color: #ffffff;
+}
+
+em {
+  color: var(--cor-destaque);
+  font-style: italic;
+}
+
+mark {
+  background-color: var(--cor-aviso);
+  color: #111827;
+  padding: 2px 5px;
+  border-radius: 4px;
+}
+
+
+/* ---------- Listas ---------- */
+
+ol {
+  padding-left: 28px;
+  list-style-type: decimal-leading-zero;
+}
+
+ul {
+  padding-left: 28px;
+  list-style-type: square;
+}
+
+dl {
+  padding: 18px;
+  background-color: var(--cor-fundo-secundaria);
+  border-radius: 10px;
+}
+
+dt {
+  margin-top: 12px;
+  font-weight: bold;
+  color: var(--cor-destaque);
+}
+
+dd {
+  margin-left: 0;
+  color: var(--cor-texto-suave);
+}
+
+
+/* ---------- Tabelas ---------- */
+
+table {
+  width: 100%;
+  margin-top: 18px;
+  border-collapse: collapse;
+  overflow: hidden;
+  background-color: var(--cor-fundo-secundaria);
+  border: 1px solid var(--cor-borda);
+  border-radius: 10px;
+}
+
+caption {
+  padding: 10px;
+  font-weight: bold;
+}
+
+thead {
+  background-color: var(--cor-destaque);
+  color: #020617;
+}
+
+th,
+td {
+  padding: 14px;
+  text-align: left;
+  border: 1px solid var(--cor-borda);
+}
+
+tbody tr:nth-child(even) {
+  background-color: #1e293b;
+}
+
+tbody tr:hover {
+  background-color: #334155;
+}
+
+tfoot {
+  background-color: #020617;
+  color: var(--cor-texto-suave);
+  font-style: italic;
+}
+
+
+/* ---------- Formulário ---------- */
+
+form {
+  max-width: 760px;
+}
+
+fieldset {
+  margin-bottom: 22px;
+  padding: 22px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 12px;
+  background-color: var(--cor-fundo-secundaria);
+}
+
+legend {
+  padding: 0 8px;
+  color: var(--cor-destaque);
+  font-weight: bold;
+}
+
+label {
+  display: block;
+  margin: 12px 0 6px;
+  font-weight: bold;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--cor-borda);
+  border-radius: 8px;
+  background-color: #020617;
+  color: var(--cor-texto);
+  font: inherit;
+}
+
+/* seletor de atributo */
+input[type="radio"] {
+  width: auto;
+  margin-right: 8px;
+}
+
+input[type="email"] {
+  border-left: 5px solid var(--cor-destaque);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: 3px solid rgba(56, 189, 248, 0.35);
+  border-color: var(--cor-destaque);
+}
+
+
+/* ---------- Ligações externas e downloads ---------- */
+
+a[download] {
+  font-weight: bold;
+  border-bottom: 2px dashed var(--cor-destaque);
+}
+
+a[href^="http"]::after {
+  content: " ↗";
+  font-size: 0.85rem;
+}
+
+
+/* ---------- Imagens, áudio e vídeo ---------- */
+
+figure {
+  margin: 0;
+}
+
+video,
+audio {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 12px;
+  background-color: #020617;
+}
+
+
+/* ---------- Classe para esconder elementos com JavaScript ---------- */
+
+.escondido,
+[hidden] {
+  display: none !important;
+}
+
+
+/* ---------- Mensagens dinâmicas ---------- */
+
+#mensagem-formulario {
+  min-height: 28px;
+  font-weight: bold;
+  color: var(--cor-destaque);
+}
+
+#info-catalogo {
+  padding: 14px;
+  border-left: 4px solid var(--cor-destaque);
+  background-color: var(--cor-fundo-secundaria);
+}
+
+
+/* ---------- Rodapé ---------- */
+
+footer {
+  margin-top: 32px;
+  padding: 28px 20px;
+  text-align: center;
+  background-color: #020617;
+  border-top: 1px solid var(--cor-borda);
+}
+
+footer address {
+  margin-bottom: 12px;
+  font-style: normal;
+  color: var(--cor-texto-suave);
+}
+
+footer p {
+  margin-bottom: 0;
+}
+
+
+/* ---------- Animação simples ---------- */
+
+@keyframes entrada-suave {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+main section {
+  animation: entrada-suave 0.5s ease both;
+}
+
+
+/* ---------- Responsividade: tablets ---------- */
+
+@media screen and (max-width: 900px) {
+  .menu-principal > ul {
+    flex-wrap: wrap;
+  }
+
+  .hero h2 {
+    font-size: 1.9rem;
+  }
+
+  .nota-lateral {
+    float: none;
+    width: 100%;
+    margin: 0 0 24px;
+  }
+
+  table {
+    font-size: 0.92rem;
+  }
+
+  th,
+  td {
+    padding: 10px;
+  }
+}
+
+
+/* ---------- Responsividade: telemóveis ---------- */
+
+@media screen and (max-width: 600px) {
+  #topo {
+    min-height: 180px;
+    padding: 32px 16px;
+  }
+
+  .logo-area h1 {
+    width: 220px;
+    height: 64px;
+  }
+
+  .menu-principal > ul {
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .menu-principal a {
+    text-align: center;
+    border-top: 1px solid var(--cor-borda);
+  }
+
+  main {
+    padding: 20px 12px;
+  }
+
+  main section {
+    padding: 20px 16px;
+  }
+
+  .hero {
+    padding: 36px 18px;
+  }
+
+  .hero h2 {
+    font-size: 1.6rem;
+  }
+
+  .conteudos-destaque {
+    display: block;
+  }
+
+  .card {
+    margin-bottom: 20px;
+  }
+
+  table,
+  thead,
+  tbody,
+  tfoot,
+  tr,
+  th,
+  td {
+    display: block;
+  }
+
+  thead {
+    display: none;
+  }
+
+  tr {
+    margin-bottom: 16px;
+    border: 1px solid var(--cor-borda);
+    border-radius: 8px;
+    overflow: hidden;
+  }
+
+  td {
+    border: none;
+    border-bottom: 1px solid var(--cor-borda);
+  }
+
+  td:last-child {
+    border-bottom: none;
+  }
+
+  fieldset {
+    padding: 16px;
+  }
+
+  .botao-destaque,
+  button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ---------- Estados criados por JavaScript ---------- */
+
+.sucesso-formulario {
+  color: #22c55e;
+}
+
+.erro-formulario {
+  color: #f87171;
+}
+
+.hero-alternativo {
+  border: 2px solid var(--cor-destaque);
+  box-shadow: 0 0 24px rgba(56, 189, 248, 0.25);
+}
+
+.card-selecionado {
+  border-color: var(--cor-aviso);
+  background-color: #3b2f13;
+}

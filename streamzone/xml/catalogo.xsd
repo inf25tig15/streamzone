@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="catalogo">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="conteudo" maxOccurs="unbounded">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="titulo" type="xs:string"/>
+              <xs:element name="tipo" type="tipoConteudo"/>
+              <xs:element name="genero" type="xs:string"/>
+              <xs:element name="duracao" type="xs:string"/>
+              <xs:element name="ano" type="xs:gYear"/>
+              <xs:element name="classificacao" type="classificacaoTipo"/>
+            </xs:sequence>
+
+            <xs:attribute name="id" type="xs:ID" use="required"/>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+  <xs:simpleType name="tipoConteudo">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="Musica"/>
+      <xs:enumeration value="Video"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="classificacaoTipo">
+    <xs:restriction base="xs:decimal">
+      <xs:minInclusive value="0"/>
+      <xs:maxInclusive value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

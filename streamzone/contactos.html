@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Formulário de contacto e feedback da StreamZone.">
+  <meta name="keywords" content="contacto, formulário, feedback, streaming">
+  <meta name="author" content="StreamZone">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>StreamZone | Contactos</title>
+
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/script.js" defer></script>
+</head>
+
+<body>
+  <header id="topo">
+    <div class="logo-area">
+      <h1>StreamZone</h1>
+      <p>Plataforma Estática de Streaming Multimédia</p>
+    </div>
+  </header>
+
+  <nav class="menu-principal" aria-label="Menu principal">
+    <ul>
+      <li><a href="index.html">Início</a></li>
+      <li><a href="catalogo.html">Catálogo</a></li>
+      <li><a href="planos.html">Planos</a></li>
+      <li><a href="multimedia.html">Multimédia</a></li>
+      <li><a href="contactos.html" class="ativo">Contactos</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Contacto e feedback</h2>
+      <p>
+        Preenche o formulário para enviar uma opinião fictícia sobre a plataforma.
+      </p>
+
+      <form id="form-contacto" action="#" method="post">
+        <fieldset>
+          <legend>Dados pessoais</legend>
+
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required minlength="2">
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required>
+        </fieldset>
+
+        <fieldset>
+          <legend>Preferências</legend>
+
+          <label for="conteudo">Tipo de conteúdo preferido:</label>
+          <select id="conteudo" name="conteudo" required>
+            <option value="">Seleciona uma opção</option>
+            <option value="musica">Música</option>
+            <option value="video">Vídeo</option>
+            <option value="ambos">Música e vídeo</option>
+          </select>
+
+          <p>Plano preferido:</p>
+
+          <label>
+            <input type="radio" name="plano" value="gratuito" required>
+            Gratuito
+          </label>
+
+          <label>
+            <input type="radio" name="plano" value="premium">
+            Premium
+          </label>
+
+          <label>
+            <input type="radio" name="plano" value="familia">
+            Família
+          </label>
+        </fieldset>
+
+        <fieldset>
+          <legend>Mensagem</legend>
+
+          <label for="mensagem">Comentário:</label>
+          <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+        </fieldset>
+
+        <button type="submit">Enviar feedback</button>
+        <button type="reset">Limpar</button>
+      </form>
+
+      <p id="mensagem-formulario"></p>
+    </section>
+  </main>
+
+  <footer>
+    <address>
+      StreamZone<br>
+      Projeto académico de Tecnologias Internet<br>
+      Universidade da Maia
+    </address>
+
+    <p>&copy; 2026 StreamZone. Projeto académico.</p>
+  </footer>
+</body>
+</html>

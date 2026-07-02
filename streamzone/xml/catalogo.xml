@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<catalogo xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:noNamespaceSchemaLocation="catalogo.xsd">
+
+  <conteudo id="c001">
+    <titulo>Night Pulse</titulo>
+    <tipo>Musica</tipo>
+    <genero>Eletronica</genero>
+    <duracao>03:42</duracao>
+    <ano>2024</ano>
+    <classificacao>4.7</classificacao>
+  </conteudo>
+
+  <conteudo id="c002">
+    <titulo>Ocean Drive</titulo>
+    <tipo>Musica</tipo>
+    <genero>Pop</genero>
+    <duracao>04:10</duracao>
+    <ano>2023</ano>
+    <classificacao>4.5</classificacao>
+  </conteudo>
+
+  <conteudo id="c003">
+    <titulo>Digital Dreams</titulo>
+    <tipo>Musica</tipo>
+    <genero>Synthwave</genero>
+    <duracao>03:58</duracao>
+    <ano>2022</ano>
+    <classificacao>4.8</classificacao>
+  </conteudo>
+
+  <conteudo id="c004">
+    <titulo>Acoustic Morning</titulo>
+    <tipo>Musica</tipo>
+    <genero>Acustico</genero>
+    <duracao>02:55</duracao>
+    <ano>2021</ano>
+    <classificacao>4.2</classificacao>
+  </conteudo>
+
+  <conteudo id="c005">
+    <titulo>Urban Lights</titulo>
+    <tipo>Video</tipo>
+    <genero>Documentario</genero>
+    <duracao>12:30</duracao>
+    <ano>2023</ano>
+    <classificacao>4.6</classificacao>
+  </conteudo>
+
+  <conteudo id="c006">
+    <titulo>Sound of the City</titulo>
+    <tipo>Video</tipo>
+    <genero>Musical</genero>
+    <duracao>08:45</duracao>
+    <ano>2024</ano>
+    <classificacao>4.4</classificacao>
+  </conteudo>
+
+  <conteudo id="c007">
+    <titulo>History of Streaming</titulo>
+    <tipo>Video</tipo>
+    <genero>Educativo</genero>
+    <duracao>15:20</duracao>
+    <ano>2022</ano>
+    <classificacao>4.9</classificacao>
+  </conteudo>
+
+  <conteudo id="c008">
+    <titulo>Visual Beats</titulo>
+    <tipo>Video</tipo>
+    <genero>Animacao</genero>
+    <duracao>06:15</duracao>
+    <ano>2021</ano>
+    <classificacao>4.3</classificacao>
+  </conteudo>
+
+</catalogo>
