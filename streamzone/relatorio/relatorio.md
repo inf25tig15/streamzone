@@ -146,17 +146,11 @@ O catálogo é armazenado num ficheiro XML e apresentado numa tabela HTML atrav�
 
 ### 3.2. Ligação para o site
 
-**Netlify:** [colocar link do Netlify]
-
-Exemplo esperado:
-
-```txt
-https://infYYtigXX.netlify.app/
-```
+**Netlify:** [https://inf25tig15.netlify.app/]
 
 ### 3.3. Repositório GitHub
 
-**GitHub:** [colocar link do repositório]
+**GitHub:** [https://github.com/inf25tig15/streamzone]
 
 ### 3.4. Estrutura de ficheiros
 
